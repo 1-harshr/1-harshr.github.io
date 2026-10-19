@@ -10,6 +10,8 @@ export function GET() {
     "",
     `> ${profile.description}`,
     "",
+    `Based in ${profile.location}, India.`,
+    "",
     ...about.paragraphs.flatMap((p) => [p, ""]),
     "## Work",
     "",

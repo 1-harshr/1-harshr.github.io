@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Doto, Martian_Mono, Newsreader } from "next/font/google";
 import { profile } from "@/content/site";
 import { themeScript } from "@/components/ThemeToggle";
+import { Splash, splashScript } from "@/components/Splash";
 import "./globals.css";
 
 const display = Doto({
@@ -81,8 +82,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${display.variable} ${mono.variable} ${serif.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script dangerouslySetInnerHTML={{ __html: splashScript }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <Splash />
+        {children}
+      </body>
     </html>
   );
 }

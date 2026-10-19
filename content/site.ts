@@ -39,6 +39,8 @@ export const profile = {
   lastName: "Ranjan",
   /** Live address of the site, used for canonical URLs, the sitemap and social previews. */
   url: "https://1-harshr.github.io",
+  location: "Daltonganj",
+  school: "IIT Kanpur",
   tagline:
     "Hey, I’m Harsh. I build the server, the API, and the app in your pocket, then go climb a mountain to debug.",
   taglineAside: "Mobile is my home turf. IIT Kanpur, 2024.",
@@ -57,7 +59,8 @@ export const about = {
     "I graduated from IIT Kanpur in 2024. Away from the keyboard I’m at the gym or on the road, often somewhere in the mountains, which is how half my side projects start.",
   ],
   facts: [
-    { label: "Studied at", value: "IIT Kanpur" },
+    { label: "Based in", value: profile.location },
+    { label: "Studied at", value: profile.school },
     { label: "Focus", value: "End-to-end products, mobile first" },
   ],
 };

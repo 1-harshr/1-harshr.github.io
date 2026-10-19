@@ -10,7 +10,7 @@ import { Writing } from "@/components/Writing";
 import { Poetry } from "@/components/Poetry";
 import { Random } from "@/components/Random";
 import { Contact } from "@/components/Contact";
-import { about, contact, jobs, profile } from "@/content/site";
+import { contact, jobs, profile } from "@/content/site";
 
 // Structured data so search engines can connect this page to Harsh's other profiles.
 const personJsonLd = {
@@ -22,7 +22,8 @@ const personJsonLd = {
   description: profile.description,
   jobTitle: jobs[0].role,
   worksFor: { "@type": "Organization", name: jobs[0].company },
-  alumniOf: { "@type": "CollegeOrUniversity", name: about.facts[0].value },
+  alumniOf: { "@type": "CollegeOrUniversity", name: profile.school },
+  homeLocation: { "@type": "Place", name: `${profile.location}, India` },
   email: `mailto:${contact.email}`,
   sameAs: contact.links.map((l) => l.href),
 };
