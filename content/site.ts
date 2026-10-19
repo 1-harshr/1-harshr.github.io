@@ -70,8 +70,8 @@ export const jobs: Job[] = [
   {
     company: "ixigo",
     role: "Software Engineer 2",
-    when: "Previously",
-    about: "Travel booking for trains, flights and buses across India",
+    when: "Aug '24 - Feb '26",
+    about: "Curated a net new AI-powered travel search experience for ixigo",
   },
 ];
 

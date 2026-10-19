@@ -29,9 +29,9 @@ export default function Home() {
       <Contact />
       <footer>
         <span>
-          {profile.firstName} {profile.lastName}, {new Date().getFullYear()}
+          {profile.firstName}, {new Date().getFullYear()}
         </span>
-        <span>Made with Kotlin-level care</span>
+        <span>Made with ❤️</span>
       </footer>
     </main>
   );
