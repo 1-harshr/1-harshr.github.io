@@ -6,6 +6,7 @@ import { Projects } from "@/components/Projects";
 import { About } from "@/components/About";
 import { Stack } from "@/components/Stack";
 import { Travel } from "@/components/Travel";
+import { Writing } from "@/components/Writing";
 import { Poetry } from "@/components/Poetry";
 import { Random } from "@/components/Random";
 import { Contact } from "@/components/Contact";
@@ -24,6 +25,7 @@ export default function Home() {
       <Projects />
       <Stack />
       <Travel />
+      <Writing />
       <Poetry />
       <Random />
       <Contact />

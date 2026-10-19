@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { poems, profile } from "@/content/site";
 
-const nav = ["work", "projects", "about", "travel", "poetry", "random", "contact"].filter(
+const nav = ["work", "projects", "about", "travel", "writing", "poetry", "random", "contact"].filter(
   (item) => item !== "poetry" || poems.length > 0,
 );
 
