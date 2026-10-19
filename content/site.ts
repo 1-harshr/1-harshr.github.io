@@ -90,7 +90,6 @@ export const projects: Project[] = [
     description:
       "A hiking companion that tells you which mountain you’re looking at, using local elevation and peak data through the camera.",
     tools: "Jetpack Compose, CameraX, Coroutines, Room, DataStore",
-    featured: true,
   },
   {
     name: "notesKMP",
