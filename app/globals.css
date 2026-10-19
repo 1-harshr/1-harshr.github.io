@@ -156,3 +156,12 @@ h2{font-weight:900;font-size:clamp(2rem,4.4vw,2.8rem);line-height:1}
 .jobs .row{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padding:24px 0}
 .jobs h3{font-family:var(--display);font-weight:900;font-size:clamp(1.8rem,4.6vw,2.4rem);line-height:1}
 .jobs p{color:var(--ink);font-weight:400}
+
+/* Theme toggle */
+.theme-toggle{position:fixed;z-index:10;top:calc(14px + env(safe-area-inset-top,0px));right:clamp(14px,3vw,28px);
+  padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--bg) 85%,transparent);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--ink);font:inherit;font-size:.75rem;cursor:pointer}
+.theme-toggle:hover{border-color:var(--ink)}
+.theme-toggle span::before{content:"["}.theme-toggle span::after{content:"]"}
+.theme-toggle .to-light,:root[data-theme="dark"] .theme-toggle .to-dark{display:none}
+:root[data-theme="dark"] .theme-toggle .to-light{display:inline}

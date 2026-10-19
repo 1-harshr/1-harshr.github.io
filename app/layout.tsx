@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Doto, Martian_Mono, Newsreader } from "next/font/google";
 import { profile } from "@/content/site";
+import { ThemeToggle, themeScript } from "@/components/ThemeToggle";
 import "./globals.css";
 
 const display = Doto({
@@ -50,8 +51,14 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${mono.variable} ${serif.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${display.variable} ${mono.variable} ${serif.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body>
+        <ThemeToggle />
+        {children}
+      </body>
     </html>
   );
 }
