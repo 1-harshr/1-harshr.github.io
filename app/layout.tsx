@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Doto, Martian_Mono, Newsreader } from "next/font/google";
 import { profile } from "@/content/site";
-import { ThemeToggle, themeScript } from "@/components/ThemeToggle";
+import { themeScript } from "@/components/ThemeToggle";
 import "./globals.css";
 
 const display = Doto({
@@ -55,10 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body>
-        <ThemeToggle />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

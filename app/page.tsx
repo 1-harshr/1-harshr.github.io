@@ -1,4 +1,6 @@
 import { Hero } from "@/components/Hero";
+import { Socials } from "@/components/Socials";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Work } from "@/components/Work";
 import { Projects } from "@/components/Projects";
 import { About } from "@/components/About";
@@ -12,6 +14,10 @@ import { profile } from "@/content/site";
 export default function Home() {
   return (
     <main className="wrap">
+      <div className="topbar">
+        <Socials />
+        <ThemeToggle />
+      </div>
       <Hero />
       <About />
       <Work />
