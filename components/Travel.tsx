@@ -21,7 +21,7 @@ export function Travel() {
               <div className="photo" style={{ aspectRatio: t.ratio }}>
                 <Image
                   src={t.src}
-                  alt={`${t.place}, ${t.year}`}
+                  alt={t.alt ?? `${t.place}, ${t.year}`}
                   fill
                   sizes="(min-width: 880px) 33vw, 50vw"
                 />

@@ -1,7 +1,9 @@
 import Image from "next/image";
-import { profile } from "@/content/site";
+import { poems, profile } from "@/content/site";
 
-const nav = ["work", "projects", "about", "travel", "poetry", "random", "contact"];
+const nav = ["work", "projects", "about", "travel", "poetry", "random", "contact"].filter(
+  (item) => item !== "poetry" || poems.length > 0,
+);
 
 export function Hero() {
   return (

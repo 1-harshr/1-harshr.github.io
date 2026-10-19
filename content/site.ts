@@ -22,8 +22,10 @@ export type TravelPhoto = {
   year: string;
   /** Path inside /public, e.g. "/travel/kedarkantha.jpg". Leave empty for a placeholder. */
   src?: string;
+  /** Describes the photo for screen readers. */
+  alt?: string;
   /** Shape of the tile in the gallery. */
-  ratio: "3/4" | "1/1" | "4/5" | "3/2" | "2/3" | "4/3";
+  ratio: "3/4" | "1/1" | "4/5" | "3/2" | "2/3" | "4/3" | "1/2";
 };
 
 export type Poem = {
@@ -50,7 +52,7 @@ export const about = {
   paragraphs: [
     "I’m an engineer who builds complete solutions: the backend, the APIs, and the apps people actually hold in their hands. I like owning the whole path, from the database schema to the last animation on screen.",
     "Mobile is my specialization. I work across native Android with Jetpack Compose, native iOS with Swift, and Kotlin Multiplatform when one codebase should serve both. On the server side I build with Kotlin and Spring, TypeScript and Python.",
-    "I graduated from IIT Kanpur in 2024. Away from the keyboard I’m usually somewhere in the mountains, which is how half my side projects start.",
+    "I graduated from IIT Kanpur in 2024. Away from the keyboard I’m at the gym or on the road, often somewhere in the mountains, which is how half my side projects start.",
   ],
   facts: [
     { label: "Studied at", value: "IIT Kanpur" },
@@ -142,51 +144,83 @@ export const stack = [
 
 // Drop photos into /public/travel and set `src` to show them.
 export const travel: TravelPhoto[] = [
-  { place: "Place name", year: "year", ratio: "3/4" },
-  { place: "Place name", year: "year", ratio: "1/1" },
-  { place: "Place name", year: "year", ratio: "4/5" },
-  { place: "Place name", year: "year", ratio: "3/2" },
-  { place: "Place name", year: "year", ratio: "2/3" },
-  { place: "Place name", year: "year", ratio: "4/3" },
+  {
+    place: "Kedarnath",
+    year: "Oct 2026",
+    src: "/travel/kedarnath.jpg",
+    alt: "Harsh stretching in front of a snow and rock wall above Kedarnath",
+    ratio: "3/4",
+  },
+  {
+    place: "Goa",
+    year: "Jul 2026",
+    src: "/travel/goa.jpg",
+    alt: "Harsh and three friends grinning with fresh coconuts at a roadside stall in Goa",
+    ratio: "4/3",
+  },
+  {
+    place: "Triund",
+    year: "Apr 2026",
+    src: "/travel/triund.jpg",
+    alt: "Harsh silhouetted on a boulder, pointing up at the snow-covered Dhauladhar ridge",
+    ratio: "3/4",
+  },
+  {
+    place: "Kareri Lake",
+    year: "Apr 2026",
+    src: "/travel/kareri.jpg",
+    alt: "Harsh chatting with a friend on the shore of Kareri Lake, snowy slopes behind",
+    ratio: "3/4",
+  },
+  {
+    place: "Dayara Bugyal",
+    year: "Oct 2025",
+    src: "/travel/dayara-bugyal.jpg",
+    alt: "Harsh with a trekking pole on the Dayara meadow, a line of snow peaks behind",
+    ratio: "3/4",
+  },
+  {
+    place: "Thailand",
+    year: "Feb 2025",
+    src: "/travel/thailand.jpg",
+    alt: "Harsh wading ankle-deep at a hazy beach in Thailand",
+    ratio: "1/2",
+  },
+  {
+    place: "Manali",
+    year: "Feb 2025",
+    src: "/travel/manali.jpg",
+    alt: "Snow-lit peaks at the end of a dark valley in Manali",
+    ratio: "4/3",
+  },
+  {
+    place: "Nag Tibba",
+    year: "Nov 2024",
+    src: "/travel/nagtibba.jpg",
+    alt: "A hand-painted van and prayer flags at a mountain viewpoint near Nag Tibba",
+    ratio: "4/3",
+  },
 ];
 
-export const poems: Poem[] = [
-  {
-    title: "Title",
-    year: "year",
-    lines: [
-      "The first line of a poem",
-      "sits here, waiting its turn,",
-      "a quiet placeholder",
-      "for words still to come.",
-    ],
-  },
-  {
-    title: "Title",
-    year: "year",
-    lines: [
-      "A second poem goes here,",
-      "short or long, in any language,",
-      "set in this same gentle type.",
-    ],
-  },
-];
+// Add poems here; the section and its nav link show up once there's at least one.
+export const poems: Poem[] = [];
 
 export const random = [
-  { label: "Currently", value: "Building something new in Kotlin" },
-  { label: "Reading", value: "Book title goes here" },
-  { label: "Listening to", value: "Song or podcast goes here" },
+  { label: "Currently", value: "Hitting the gym regularly and travelling a lot" },
+  { label: "Training", value: "Logging workouts on Strava" },
+  { label: "Building", value: "Keeping my GitHub active with side projects" },
   { label: "Fun fact", value: "I wrote an alarm I can’t snooze without doing pushups." },
 ];
 
 export const contact = {
   heading: "Let’s build something.",
   email: "theharsh68@gmail.com",
-  // Replace "#" with your links when ready.
-  resume: "#",
+  resume: "https://drive.google.com/file/d/1of60OYFuQFKKMEHCOr_0WKzLOI2Q87im/view?usp=sharing",
   links: [
     { label: "GitHub", href: gh },
-    { label: "LinkedIn", href: "https://www.linkedin.com/" },
-    { label: "X", href: "https://x.com/" },
+    { label: "Strava", href: "https://strava.app.link/3ok382Jwh7b" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/harshr20/" },
+    { label: "X", href: "https://x.com/roamingHarsh" },
+    { label: "Medium", href: "https://medium.com/@theharsh68" },
   ],
 };

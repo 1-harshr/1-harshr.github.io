@@ -3,6 +3,8 @@ import { poems } from "@/content/site";
 import { Section } from "./Section";
 
 export function Poetry() {
+  if (poems.length === 0) return null;
+
   return (
     <Section id="poetry" title="~/poetry" lede="Things I write when the code compiles.">
       <div className="poems">
