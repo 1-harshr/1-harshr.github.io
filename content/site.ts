@@ -37,6 +37,8 @@ export type Poem = {
 export const profile = {
   firstName: "Harsh",
   lastName: "Ranjan",
+  /** Live address of the site, used for canonical URLs, the sitemap and social previews. */
+  url: "https://1-harshr.github.io",
   tagline:
     "Hey, I’m Harsh. I build the server, the API, and the app in your pocket, then go climb a mountain to debug.",
   taglineAside: "Mobile is my home turf. IIT Kanpur, 2024.",

@@ -30,15 +30,42 @@ const serif = Newsreader({
 const fullName = `${profile.firstName} ${profile.lastName}`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? profile.url),
   title: fullName,
   description: profile.description,
+  authors: [{ name: fullName, url: profile.url }],
+  creator: fullName,
+  keywords: [
+    fullName,
+    "software engineer",
+    "mobile developer",
+    "Android",
+    "iOS",
+    "Kotlin Multiplatform",
+    "Jetpack Compose",
+    "Swift",
+    "backend",
+    "IIT Kanpur",
+  ],
+  alternates: { canonical: "/" },
   icons: {
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>",
   },
   openGraph: {
+    type: "profile",
+    url: "/",
+    siteName: fullName,
     title: fullName,
     description: profile.description,
+    firstName: profile.firstName,
+    lastName: profile.lastName,
+    images: [{ url: profile.photo.src, alt: profile.photo.alt }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: fullName,
+    description: profile.description,
+    creator: "@roamingHarsh",
     images: [profile.photo.src],
   },
 };

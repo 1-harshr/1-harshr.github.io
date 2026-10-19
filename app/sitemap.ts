@@ -1,0 +1,16 @@
+import type { MetadataRoute } from "next";
+import { profile } from "@/content/site";
+
+export const dynamic = "force-static";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: profile.url,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+      images: [`${profile.url}${profile.photo.src}`],
+    },
+  ];
+}
