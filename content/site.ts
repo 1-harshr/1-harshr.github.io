@@ -101,7 +101,7 @@ export const projects: Project[] = [
   {
     name: "My Gym",
     repo: `${gh}/GymManager`,
-    platforms: "Android, iOS, Web, Server",
+    platforms: "Mobile, Web, Server",
     description:
       "An offline-first app for running a gym day to day: members, plans, payments, dues and renewal reminders, all without a server.",
   },
