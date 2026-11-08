@@ -99,6 +99,14 @@ export const projects: Project[] = [
       "A complete notes app for both platforms plus its backend, written entirely in Kotlin Multiplatform.",
   },
   {
+    name: "GymManager",
+    repo: `${gh}/GymManager`,
+    platforms: "Android, iOS",
+    description:
+      "An offline-first app for running a gym day to day: members, plans, payments, dues and renewal reminders, all without a server.",
+    tools: "Kotlin Multiplatform, Compose Multiplatform, Room, DataStore",
+  },
+  {
     name: "FitTrack",
     repo: `${gh}/FitTrack`,
     platforms: "Android",
