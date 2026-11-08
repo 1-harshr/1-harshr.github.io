@@ -99,7 +99,7 @@ export const projects: Project[] = [
       "A complete notes app for both platforms plus its backend, written entirely in Kotlin Multiplatform.",
   },
   {
-    name: "GymManager",
+    name: "My Gym",
     repo: `${gh}/GymManager`,
     platforms: "Android, iOS",
     description:
