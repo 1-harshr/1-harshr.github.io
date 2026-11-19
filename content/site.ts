@@ -84,6 +84,14 @@ const gh = "https://github.com/1-harshr";
 
 export const projects: Project[] = [
   {
+    name: "DesiCrics",
+    repo: `${gh}/DesiCrics`,
+    platforms: "Android, Backend",
+    description:
+      "A replica of CricHeros, free of cost and ad-free, built in Kotlin Multiplatform. Deployed via Render.",
+    tools: "Compose, Ktor, KMP, PostgreSQL",
+  },
+  {
     name: "PeakBud",
     repo: `${gh}/PeakBud`,
     platforms: "Android",
